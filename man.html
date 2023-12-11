@@ -6,11 +6,11 @@
 process make a provision to catch the signal and display alarm is fired.(Use Kill, fork, signal <br>
 and sleep system call)  <br>
 ANS
-#include <stdio.h> <br>
-#include <stdlib.h> <br>
-#include <signal.h> <br>
-#include <sys/types.h> <br>
-#include <unistd.h> <br>
+#include stdio.h <br>
+#include stdlib.h <br>
+#include signal.h<br>
+#include sys/types.h <br>
+#include unistd.h <br>
 
 void alarmHandler(int signum) { <br>
     printf("Alarm is fired!\n"); <br>
@@ -45,9 +45,9 @@ int main() { <br>
     return 0; <br>
 } <br>
  Take multiple files as Command Line Arguments and print their inode numbers and file types <br>
- #include <stdlib.h> <br>
-#include <stdio.h> <br>
-#include <string.h> <br>
+ #include stdlib.h <br>
+#include stdio.h <br>
+#include string.h <br>
 
 int main(int argc, char *argv[]) { <br>
     char command[50]; <br>
@@ -74,9 +74,9 @@ int main(int argc, char *argv[]) { <br>
     return EXIT_SUCCESS; <br>
 } <br>
  Take multiple files as Command Line Arguments and print their inode numbers and file types  <br>
-#include <stdlib.h> <br>
-#include <stdio.h> <br>
-#include <string.h> <br>
+#include stdlib.h <br>
+#include stdio.h <br>
+#include string.h <br>
 
 int main(int argc, char *argv[]) { <br>
     char command[50]; <br>
@@ -106,12 +106,12 @@ int main(int argc, char *argv[]) { <br>
  permissions, File size, File access and modification time and so on of a given file using stat() <br>
  system call <br>
 ans: <br>
-#include <stdio.h> <br>
-#include <unistd.h> <br>
-#include <sys/stat.h> <br>
-#include <sys/types.h> <br>
-#include <time.h> <br>
-#include <stdlib.h> <br>
+#include stdio.h <br>
+#include unistd.h <br>
+#include sys/stat.h <br>
+#include sys/types.h <br>
+#include time.h <br>
+#include stdlib.h <br>
 
 int main(int argc, char *argv[]) { <br>
     struct stat info; <br>
@@ -143,10 +143,10 @@ int main(int argc, char *argv[]) { <br>
  Write a C program that catches the ctrl-c (SIGINT) signal for the first time and display the <br>
 appropriate message and exits on pressing ctrl-c again. <br>
 ANS <br>
-#include <stdio.h> <br>
-#include <unistd.h> <br>
-#include <stdlib.h> <br>
-#include <signal.h> <br>
+#include stdio.h <br>
+#include unistd.h <br>
+#include stdlib.h <br>
+#include signal.h <br>
 
 void sigfun(int sig) { <br>
     printf("You have pressed Ctrl-C, please press again to exit\n"); <br>
@@ -165,9 +165,9 @@ int main() { <br>
 } <br>
  Print the type of file and inode number where file name accepted through Command Line <br>
 ANS <br>
-#include <stdio.h> <br>
-#include <stdlib.h> <br>
-#include <string.h> <br>
+#include stdio.h <br>
+#include stdlib.h <br>
+#include string.h <br>
 
 int main(int argc, char *argv[]) { <br>
     char command[50]; <br>
@@ -196,11 +196,11 @@ int main(int argc, char *argv[]) { <br>
 program. The parent process set the signal handler for death of child signal and Alarm signal. If a child <br>
 process does not complete its execution in 5 second then parent process kills child process. <br>
 ANS <br>
-#include <signal.h> <br>
-#include <stdio.h> <br>
-#include <stdlib.h> <br>
-#include <sys/types.h> <br>
-#include <unistd.h> <br>
+#include signal.h <br>
+#include stdio.h <br>
+#include stdlib.h <br>
+#include sys/types.h <br>
+#include unistd.h <br>
 
 
 void sighup(); <br>
@@ -266,8 +266,8 @@ void sigquit()<br>
  Write a C program to find whether a given files passed through command line arguments are present in<br>
 current directory or not<br>
 ANS<br>
-#include<stdio.h><br>
-#include<unistd.h><br>
+#include stdio.h<br>
+#include unistd.h<br>
 int main(int argc,char *argv[])<br>
 {<br>
 if(access(argv[1],F_OK)==0)<br>
@@ -343,8 +343,8 @@ exit(0);<br>
 pipe and parent process display it. Message1 = “Hello World” Message2 = “Hello SPPU” Message3 =<br>
 “Linux is Funny” <br>
 ans
-#include<stdio.h><br>
-#include<unistd.h><br>
+#include stdio.h<br>
+#include unistd.h<br>
 int main() {<br>
 int pipefds[2];<br>
 int returnstatus;<br>
@@ -380,12 +380,12 @@ return 0;<br>
 }<br>
  Display all the files from current directory which are created in particular month <br>
 ans<br>
-#include <stdio.h><br>
-#include <dirent.h><br>
-#include <string.h><br>
-#include <sys/stat.h><br>
-#include <time.h><br>
-#include <stdlib.h><br>
+#include stdio.h<br>
+#include dirent.h<br>
+#include string.h<br>
+#include sys/stat.h<br>
+#include time.h<br>
+#include stdlib.h<br>
 
 int main(int argc, char *argv[]) {<br>
     if (argc != 2) {<br>
@@ -428,13 +428,13 @@ int main(int argc, char *argv[]) {<br>
 Write a C program to create n child processes. When all n child processes terminates, Display total<br>
 cumulative time children spent in user and kernel mode<br>
 ans<br>
-#include<sys/types.h><br>
-#include<sys/wait.h><br>
-#include<unistd.h><br>
-#include<time.h><br>
-#include<sys/times.h><br>
-#include<stdio.h><br>
-#include<stdlib.h><br>
+#include sys/types.h<br>
+#include sys/wait.h<br>
+#include unistd.h><br>
+#include time.h<br>
+#include sys/times.h<br>
+#include stdio.h<br>
+#include stdlib.h<br>
 int main(void)<br>
 {<br>
 int i, status;<br>
@@ -489,9 +489,9 @@ exit(EXIT_SUCCESS);<br>
 }<br>
  Write a C Program that demonstrates redirection of standard output to a file <br>
 ans<br>
-#include <stdio.h><br>
-#include <stdlib.h><br>
-#include <string.h><br>
+#include stdio.h<br>
+#include stdlib.h<br>
+#include string.h<br>
 
 int main(int argc, char *argv[]) {<br>
     if (argc == 2) {<br>
@@ -513,12 +513,12 @@ int main(int argc, char *argv[]) {<br>
 Implement the following unix/linux command (use fork, pipe and exec system call) ls –l | wc –l<br>
 // C code to implement ls | wc command <br>
 ans<br>
-#include <stdio.h><br>
-#include <stdlib.h><br>
-#include <fcntl.h><br>
-#include<errno.h><br>
-#include<sys/wait.h><br>
-#include <unistd.h><br>
+#include stdio.h<br>
+#include stdlib.h<br>
+#include fcntl.h<br>
+#include errno.h<br>
+#include sys/wait.h <br>
+#include unistd.h<br>
 int main(){<br>
  
  
@@ -559,10 +559,10 @@ int main(){<br>
 }<br>
  Write a C program that redirects standard output to a file output.txt. (use of dup and open system call). <br>
 ans<br>
-#include <stdio.h><br>
-#include <stdlib.h><br>
-#include <unistd.h><br>
-#include <fcntl.h><br>
+#include stdio.h<br>
+#include stdlib.h<br>
+#include unistd.h<br>
+#include fcntl.h<br>
 int main(void) {<br>
 int number1, number2, sum;<br>
 int input_fds = open("./input.txt", O_RDONLY);<br>
@@ -577,10 +577,10 @@ return EXIT_SUCCESS;<br>
 }<br>
 Generate parent process to write unnamed pipe and will read from it<br>
 ans<br>
-#include <stdio.h><br>
-#include <stdlib.h><br>
-#include <unistd.h><br>
-#include <string.h><br>
+#include stdio.h<br>
+#include stdlib.h<br>
+#include unistd.h<br>
+#include string.h<br>
     <br>
 int main() {
     int pipe_fd[2]; // File descriptors for the pipe<br>
@@ -631,10 +631,10 @@ int main() {
  Write a C program to Identify the type (Directory, character device, Block device, Regular file, FIFO or
 pipe, symbolic link or socket) of given file using stat() system call.<br>
 ans
-#include <stdio.h><br>
-#include <sys/types.h><br>
-#include <sys/stat.h><br>
-#include <unistd.h><br>
+#include stdio.h<br>
+#include sys/types.h<br>
+#include sys/stat.h<br>
+#include unistd.h<br>
 void identifyFileType(const char *path) {<br>
  struct stat fileStat;<br>
  // Use stat() to get information about the file<br>
@@ -673,10 +673,10 @@ int main(int argc, char *argv[]) {<br>
  Generate parent process to write unnamed pipe and will write into it. Also generate child process which<br>
 will read from pipe <br>
 ans<br>
-#include <stdio.h><br>
-#include <stdlib.h><br>
-#include <unistd.h><br>
-#include <string.h><br>
+#include stdio.h<br>
+#include stdlib.h<br>
+#include unistd.h<br>
+#include string.h<br>
 
 int main() {<br>
     int pipe_fd[2]; // File descriptors for the pipe<br>
@@ -726,8 +726,8 @@ int main() {<br>
 }<br>
 Write a C program to get and set the resource limits such as files, memory associated with a process<br>
 ans<br>
-#include <stdio.h><br>
-#include <stdlib.h><br>
+#include stdio.h<br>
+#include stdlib.h<br>
 #include <sys/resource.h><br>
 void printLimits() {<br>
  struct rlimit limits;<br>
@@ -774,10 +774,10 @@ int main() {<br>
 }<br>
 Write a C program that redirects standard output to a file output.txt. (use of dup and open system call). <br>
 ans<br>
-#include <stdio.h><br>
-#include <stdlib.h><br>
-#include <fcntl.h><br><br>
-#include <unistd.h><br>
+#include stdio.h<br>
+#include stdlib.h<br>
+#include fcntl.h<br><br>
+#include unistd.h<br>
 int main() {<br>
  // Open the file for writing (create if it doesn't exist, truncate to zero if it does)<br>
  int fileDescriptor = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0666);<br>
@@ -808,11 +808,11 @@ int main() {<br>
 (separate folder is made with output init)<br>
  Write a C program that print the exit status of a terminated child process<br>
 ans<br>
-#include <stdio.h><br><br>
-#include <stdlib.h><br>
-#include <unistd.h><br>
-#include <sys/types.h><br>
-#include <sys/wait.h><br>
+#include stdio.h<br><br>
+#include stdlib.h<br>
+#include unistd.h<br>
+#include sys/types.h<br>
+#include sys/wait.h<br>
 
 int main(void) {<br>
     pid_t pid = fork();<br>
@@ -883,9 +883,9 @@ int main(int argc, char *argv[]) {<br>
 . Write a C program that illustrates suspending and resuming processes using signals<br>
 . Write a C program that illustrates suspending and resuming processes using signals <br>
 ans<br>
-#include <stdio.h><br>
-#include <unistd.h><br>
-#include <pthread.h><br>
+#include stdio.h<br>
+#include unistd.h<br>
+#include pthread.h<br>
 
 void* child_function(void* arg) {<br>
     while (1) { // Loop forever.<br>
@@ -925,8 +925,8 @@ int main() {<br>
  Write a C program that a string as an argument and return all the files that begins with that name in the<br>
 current directory. For example > ./a.out foo will return all file names that begins with foo
 ans<br>
-#include<stdio.h><br>
-#include<dirent.h><br>
+#include stdio.h<br>
+#include dirent.h<br>
 int main(void)<br>
 {<br>
  DIR *d;<br>
@@ -948,11 +948,11 @@ ans<br>
 use this command " $ find . -size 1M" if conde does not work<br>
 
 
-#include <stdio.h><br>
-#include <stdlib.h><br>
-#include <dirent.h><br>
-#include <sys/stat.h><br>
-#include <string.h>  <br>
+#include stdio.h<br>
+#include stdlib.h<br>
+#include dirent.h<br>
+#include sys/stat.h<br>
+#include string.h  <br>
 
 void listFilesWithSize(char *path, off_t sizeThreshold) {<br>
     DIR *dir;<br>
@@ -1016,14 +1016,14 @@ int main() {<br>
 Write a C program to find file properties such as inode number, number of hard link, File permissions,<br>
 File size, File access and modification time and so on of a given file using stat() system call.<br>
 ans<br>
-#include<stdio.h><br>
-#include<unistd.h><br>
-#include<dirent.h><br>
-#include<string.h><br>
-#include<time.h><br>
-#include<stdlib.h><br>
-#include<sys/stat.h><br>
-#include<sys/types.h><br>
+#include stdio.h<br>
+#include unistd.h<br>
+#include dirent.h<br>
+#include string.h<br>
+#include time.h<br>
+#include stdlib.h<br>
+#include sys/stat.h<br>
+#includ sys/types.h<br>
 
 int main(int argc, char* argv[]) {<br>
     struct stat info;<br>
