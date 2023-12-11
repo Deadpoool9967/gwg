@@ -283,11 +283,11 @@ Papa has Killed me!!!”. <br>
 ANS<br>
 // C program to implement sighup(), sigint()<br>
 // and sigquit() signal functions<br>
-#include <signal.h><br>
-#include <stdio.h><br>
-#include <stdlib.h><br>
-#include <sys/types.h><br>
-#include <unistd.h><br>
+#include signal.h<br>
+#include stdio.h<br>
+#include stdlib.h<br>
+#include sys/types.h<br>
+#include unistd.h<br>
 // function declaration<br>
 void sighup();<br>
 void sigint();<br>
@@ -728,7 +728,7 @@ Write a C program to get and set the resource limits such as files, memory assoc
 ans<br>
 #include stdio.h<br>
 #include stdlib.h<br>
-#include <sys/resource.h><br>
+#include sys/resource.h<br>
 void printLimits() {<br>
  struct rlimit limits;<br>
  // Get the current resource limits for file descriptors<br>
@@ -839,9 +839,9 @@ int main(void) {<br>
 Write a C program which receives file names as command line arguments and display those filenames<br>
 in ascending order according to their sizes. I) (e.g $ a.out a.txt b.txt c.txt, …)<br>
 ans<br>
-#include <stdio.h><br>
-#include <stdlib.h><br>
-#include <sys/stat.h><br>
+#include stdio.h<br>
+#include stdlib.h<br>
+#include sys/stat.h<br>
 // Structure to hold file information<br>
 struct FileInfo {<br>
  char *name;<br>
